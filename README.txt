@@ -1,3 +1,3 @@
 README
 
-Programmin in Java Intro class.
+Programs in Java Intro class.
