@@ -1,1 +1,0 @@
-{"ts":1346292131425,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"public class Sample1\n{\n    // This is a uselss comment\n\tpublic static void main(String[] args)\n\t{\n\t\tSystem.out.println(\"To be or not to be? That was the question.\");\n\t}\n}"]],"start1":0,"start2":0,"length1":0,"length2":170}]],"length":170}
