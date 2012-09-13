@@ -1,0 +1,2 @@
+{"ts":1347502235345,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1347501856213,"patch":[[{"diffs":[[1,"import java.util.Scanner;\n\npublic class Program3 {\n    public static void main(String[] args) {\n        System.out.print(\"Input an integer: \");\n\n    \tint num = -1;\n        while (num != 0) {\n\n        Scanner jint = new Scanner(System.in);\n        num = jint.nextInt();\n\n        }\n    }\n}"]],"start1":0,"start2":0,"length1":0,"length2":287}]],"length":287,"saved":false}
