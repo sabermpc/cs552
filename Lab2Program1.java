@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class L2Program1 {
+public class Lab2Program1 {
     public static void main(String[] args) {
         int userInt;
         int max, min, total;
