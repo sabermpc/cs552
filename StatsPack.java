@@ -1,23 +1,22 @@
 public class StatsPack {
-    private static int total, numVals, numPositive, numNegative, numZero;
+    private static int total, numVals, numPositive, numNegative, numZero; //does this save memory?
+    private double average;
 	private int lowest = Integer.MAX_VALUE;
 	private int highest = Integer.MIN_VALUE;
-	private double average;
 	
 	public StatsPack() {
+    	total = 0;
 		numVals = 0;
+    	average = 0;
+    	lowest = Integer.MAX_VALUE;
+    	highest = Integer.MIN_VALUE;
 		numPositive = 0;
 		numNegative = 0;
 		numZero = 0;
-		total = 0;
-		lowest = Integer.MAX_VALUE;
-		highest = Integer.MIN_VALUE;
-		average = 0;
 	}
 	void addValue(int val) {
 		total = total + val;
 		numVals++;
-		
 		average = (total + 0.0) / numVals;
 		if (val < lowest) lowest = val;
 		if (val > highest) highest = val;
@@ -32,7 +31,7 @@ public class StatsPack {
 		return numVals;
 	}
 	double average() {
-//		if (numVals == 0) return average.format(); //is this line overkill?
+//		if (numVals == 0) return average.format(); //is this incomplete line overkill?
 		return average;
 	}
 	int lowest() {
