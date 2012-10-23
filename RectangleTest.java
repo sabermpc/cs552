@@ -6,7 +6,7 @@ public class RectangleTest {
         String c = "orange";
 
         Scanner s = new Scanner(System.in);
-        Rectangle rect = new Rectangle(l, w, c);
+        Rectangle rect = new Rectangle();
         
         System.out.println("Enter a # for length.");
         l = s.nextInt();

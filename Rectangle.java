@@ -1,8 +1,9 @@
 public class Rectangle {
-    private int length = 0;
-    private int width = 0;
-    private String color = "white";
+    private int length;
+    private int width;
+    private String color;
 
+    public Rectangle () {}
     public Rectangle (int l, int w, String c) {
         length = l;
         width = w;
