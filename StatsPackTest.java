@@ -15,7 +15,7 @@ public class StatsPackTest {
 			if (command.equals("add")) {
 				while (scanString.hasNextLine()) {
 					if (!scanString.hasNextInt()) {
-						System.out.println("An invalid entry was made in 'add' command.");
+						System.out.println("WARNING - an invalid entry was made in 'add' command.");
 						break;
 					}
 					int inVal = scanString.nextInt();
