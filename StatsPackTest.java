@@ -14,6 +14,10 @@ public class StatsPackTest {
 			
 			if (command.equals("add")) {
 				while (scanString.hasNextLine()) {
+					if (!scanString.hasNextInt()) {
+						System.out.println("Invalid entry for 'add' command.");
+						break;
+					}
 					int inVal = scanString.nextInt();
 					stat.addValue(inVal);
 				}
