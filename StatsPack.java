@@ -1,5 +1,5 @@
 public class StatsPack {
-    private static int total, numVals, numPositive, numNegative, numZero;
+    private int total, numVals, numPositive, numNegative, numZero;
     private double average;
 	private int lowest = Integer.MAX_VALUE;
 	private int highest = Integer.MIN_VALUE;
