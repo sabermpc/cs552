@@ -1,0 +1,2 @@
+{"ts":1351132924686,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"import java.util.Scanner;\n\npublic class Exam {\n    public static void main(String[] args) {\n\t\tQuiz quizOne = new Quiz(10);\n\t}\n}"]],"start1":0,"start2":0,"length1":0,"length2":127}]],"length":127}
+{"contributors":[],"silentsave":false,"ts":1351144878249,"patch":[[{"diffs":[[0,"ass "],[-1,"Ex"],[1,"QuizProgr"],[0,"am {"]],"start1":36,"start2":36,"length1":10,"length2":17}]],"length":134,"saved":false}

@@ -2,18 +2,22 @@ import java.util.Scanner;
 
 public class StatsPackTest {
     public static void main(String[] args) {
-		System.out.print("Enter command: ");
+    	System.out.print("Enter command: ");
 		Scanner s = new Scanner(System.in);
 
 		StatsPack stat = new StatsPack();
 		while (s.hasNextLine()) {
 			String str = s.nextLine();
-			
+
 			Scanner scanString = new Scanner(str);
 			String command = scanString.next();
-			
+
 			if (command.equals("add")) {
 				while (scanString.hasNextLine()) {
+					if (!scanString.hasNextInt()) {
+						System.out.println("WARNING - an invalid entry was made in 'add' command.");
+						break;
+					}
 					int inVal = scanString.nextInt();
 					stat.addValue(inVal);
 				}
@@ -28,7 +32,7 @@ public class StatsPackTest {
 			else if (command.equals("reset")) stat.reset();
 			else if (command.equals("exit")) break;
 			else System.out.println("Invalid command");
-			
+
 			System.out.print("Enter command: ");
 		}
 	}
