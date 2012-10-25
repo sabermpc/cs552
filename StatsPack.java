@@ -17,7 +17,7 @@ public class StatsPack {
 	void addValue(int val) {
 		total = total + val;
 		numVals++;
-		average = (total + 0.0) / numVals;
+		average = (float)total / numVals;
 		if (val < lowest) lowest = val;
 		if (val > highest) highest = val;
 		if (val > 0) numPositive++;
