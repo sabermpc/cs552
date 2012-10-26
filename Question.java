@@ -1,26 +1,27 @@
 public class Question {
-    private String text;
-	private String rightAnswer;
-	private String lastAnswer;
-	private Boolean isRight;
-
+    private String questionText;
+    private String correctAnswer;
+	private String answer;
+//	private Boolean isCorrect; //Unused member variable
+	
 	public Question(String questionText, String correctAnswer) {
-		text = questionText;
-		rightAnswer = correctAnswer;
+		this.questionText = questionText;
+		this.correctAnswer = correctAnswer;
 	}
 	public String getQuestionText() {
-		return text;
+		return questionText;
 	}
 	public void setAnswer(String answer) {
-		lastAnswer = answer;
+		this.answer = answer;
 	}
 	public String getAnswer() {
-		return lastAnswer;
+		return answer;
 	}
 	public String getCorrectAnswer() {
-		return rightAnswer;
+		return correctAnswer;
 	}
 	public Boolean isCorrect() {
-		return isRight;
+		if (correctAnswer.equalsIgnoreCase(answer)) return true;
+		return false;
 	}
 }

@@ -1,30 +1,38 @@
 public class Quiz {
-    private String[] Question;
-	private int questionsAdded;
-	private int questionsAnswered;
-	private int questionsCorrect;
-	private int max;
+    private Question[] quiz;
+    private int numQuestions;
+	private int numAnswered;
+	private int numCorrect;
 
 	public Quiz(int max) {
-		this.max = max;
+		quiz = new Question[max];
 	}
 	public Boolean addQuestion(Question q) {
-/*		if (q <= max) return true;
-		else return false;
-*/	}
-	Question getQuestion(int i) {
-		return i;
+		if (getNumQuestions() >= quiz.length) return false;
+		
+		numQuestions++;
+		quiz[numQuestions - 1] = q;
+		return true;
+	}
+	public Question getQuestion(int i) {
+		return quiz[i];
 	}
 	public int getNumQuestions() {
-		return questionsAdded;
+		return numQuestions;
+	}
+	public void setNumAnswered() {	//Added method
+		numAnswered++;
 	}
 	public int getNumAnswered() {
-		return questionsAnswered;
+		return numAnswered;
+	}
+	public void setNumCorrect() {	//Added method
+		numCorrect++;
 	}
 	public int getNumCorrect() {
-		return questionsCorrect;
+		return numCorrect;
 	}
 	public double getScore() {
-		return (float)questionsCorrect / questionsAdded;
+		return ((float)numCorrect / numQuestions) * 100;
 	}
 }
