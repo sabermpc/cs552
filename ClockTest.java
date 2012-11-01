@@ -1,39 +1,32 @@
 import java.util.Scanner;
 
 public class ClockTest {
-    public static void main(String[] args) {
+	public static void main(String[] args) {
     	System.out.print("Enter command: ");
 		Scanner s = new Scanner(System.in);
 
-		StatsPack stat = new StatsPack();
+		Clock c = new Clock(03, 33, 13);
+//		Clock c = new Clock(03, 33, 32, pm);
+
 		while (s.hasNextLine()) {
 			String str = s.nextLine();
 
 			Scanner scanString = new Scanner(str);
 			String command = scanString.next();
 
-			if (command.equals("add")) {
-				while (scanString.hasNextLine()) {
+			if (command.equals("sec")) {
 					if (!scanString.hasNextInt()) {
-						System.out.println("WARNING - an invalid entry was made in 'add' command.");
-						break;
+						System.out.println("WARNING - an invalid entry was made.");
 					}
 					int inVal = scanString.nextInt();
-					stat.addValue(inVal);
-				}
-			} else if (command.equals("num")) System.out.println(stat.numVals());
-			else if (command.equals("tot")) System.out.println(stat.total());
-			else if (command.equals("avg")) System.out.println(stat.average());
-			else if (command.equals("low")) System.out.println(stat.lowest());
-			else if (command.equals("high")) System.out.println(stat.highest());
-			else if (command.equals("pos")) System.out.println(stat.numPositive());
-			else if (command.equals("neg")) System.out.println(stat.numNegative());
-			else if (command.equals("zero")) System.out.println(stat.numZero());
-			else if (command.equals("reset")) stat.reset();
+					c.addSeconds(inVal);
+			} else if (command.equals("min")) System.out.println();
+			else if (command.equals("hr")) System.out.println();
+			else if (command.equals("pm")) System.out.println();
 			else if (command.equals("exit")) break;
 			else System.out.println("Invalid command");
 
 			System.out.print("Enter command: ");
-		}		
+		}
 	}
 }
