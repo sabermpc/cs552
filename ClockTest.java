@@ -1,32 +1,31 @@
 import java.util.Scanner;
 
 public class ClockTest {
-	public static void main(String[] args) {
-    	System.out.print("Enter command: ");
-		Scanner s = new Scanner(System.in);
+    public static void main(String[] args) {
+		Clock b = new Clock(11, 30, 30);
+		Clock c = new Clock(11, 30, 30, false);
+//		c.addSeconds(30);
+//		c.addSeconds(30);
+//		b.addSeconds(30);
+//		b.addSeconds(30);
+//		c.addMinutes(50);
+//		c.addMinutes(50);
+//		b.addMinutes(50);
+//		b.addMinutes(50);
+//		c.addHours(13);
+//		c.addHours(13);
+//		b.addHours(13);
+//		b.addHours(13);
+//		c.set(1, 59, 59);
+//		b.set(1, 59, 59);
 
-		Clock c = new Clock(03, 33, 13);
-//		Clock c = new Clock(03, 33, 32, pm);
-
-		while (s.hasNextLine()) {
-			String str = s.nextLine();
-
-			Scanner scanString = new Scanner(str);
-			String command = scanString.next();
-
-			if (command.equals("sec")) {
-					if (!scanString.hasNextInt()) {
-						System.out.println("WARNING - an invalid entry was made.");
-					}
-					int inVal = scanString.nextInt();
-					c.addSeconds(inVal);
-			} else if (command.equals("min")) System.out.println();
-			else if (command.equals("hr")) System.out.println();
-			else if (command.equals("pm")) System.out.println();
-			else if (command.equals("exit")) break;
-			else System.out.println("Invalid command");
-
-			System.out.print("Enter command: ");
-		}
-	}
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(c.equals(b));
+/*		System.out.println(c.getHours12());
+		System.out.println(c.getHours24());
+		System.out.println(c.getMinutes());
+		System.out.println(c.getSeconds());
+		System.out.println(c.isPM());
+*/	}
 }
