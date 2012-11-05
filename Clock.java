@@ -2,7 +2,7 @@ public class Clock {
     private int h, h12, m, s;
     private boolean pm;
 
-	public Clock() {
+    public Clock() {
 		h = 0;
 		m = 0;
 		s = 0;
@@ -117,9 +117,8 @@ public class Clock {
 		}
 	}
 	public String toString() {
-		//Return time in 12 / 24 hr format
-		if (isPM()) return "[" + getHours24() + ":" + getMinutes() + ":" + getSeconds() + " / " + getHours12() + ":" + getMinutes() + ":" + getSeconds() + " PM]";
-		return "[" + getHours24() + ":" + getMinutes() + ":" + getSeconds() + " / " + getHours12() + ":" + getMinutes() + ":" + getSeconds() + " AM]";
+		if (isPM()) return String.format("[%02d:%02d:%02d / %02d:%02d:%02d PM]", getHours24(), getMinutes(), getSeconds(), getHours12(), getMinutes(), getSeconds());
+		return String.format("[%02d:%02d:%02d / %02d:%02d:%02d AM]", getHours24(), getMinutes(), getSeconds(), getHours12(), getMinutes(), getSeconds());
 	}
 	void addSeconds(int ss) {
 		int minCounter = 0;
