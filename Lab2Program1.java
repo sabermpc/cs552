@@ -2,10 +2,8 @@ import java.util.Scanner;
 
 public class Lab2Program1 {
     public static void main(String[] args) {
-        int userInt = -1;
-        int max = 0, min = 1000, total = 0;
-        double average = 0.0, i = 0.0;
-        int pos = 0, neg = 0; //counters
+        int  i = 0, max = Integer.MIN_VALUE, min = Integer.MAX_VALUE, neg = 0, pos = 0, total = 0, userInt = -1;
+        double average = 0.0;
 
         while (userInt != 0) {
             System.out.print("Input number or '0' to terminate: ");
@@ -32,7 +30,7 @@ public class Lab2Program1 {
             total = total + userInt;
 
             //Average of the numbers.
-            average = total / i + 0.0;
+            average = (float)total / i;
         }
 
         System.out.println("The sum of the numbers: " + total);

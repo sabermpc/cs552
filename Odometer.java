@@ -1,7 +1,6 @@
 public class Odometer {
-    private double totalOdo = 0;
-    private double trip = 0;
-    
+    private double totalOdo, trip;
+
     public Odometer() {
         totalOdo = 0;
         trip = 0;
@@ -24,23 +23,22 @@ public class Odometer {
         return trip;
     }
     public String toString() {
-        String str = String.format("Odometer:\tmiles=[%.1f]\ttrip=[%.1f].", totalOdo, trip);
-        return str;
+        return String.format("Odometer:\tmiles=[%.1f]\ttrip=[%.1f].", totalOdo, trip);
     }
-    
+
     public static void main(String[] args) {
         Odometer m1 = new Odometer();
         m1.addMiles(92.8);
-        System.out.println(m1); // implicitly calls the toString() method
-        
+        System.out.println(m1);
+
         m1.resetTrip();
         System.out.println(m1);
-        
+
         m1.addMiles(8.46);
         System.out.println(m1);
         System.out.printf("total miles=%.1f%n", m1.getTotalMiles());
         System.out.printf("trip miles=%.1f%n", m1.getTripMiles());
-        
+
         Odometer m2 = new Odometer(6.52);
         System.out.println(m2);
         m2.addMiles(1.02);

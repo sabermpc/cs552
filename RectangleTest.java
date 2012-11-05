@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 public class RectangleTest {
     public static void main(String[] args) {
-        int l = 3, w = 5;
-        String c = "orange";
+        int l, w;
+        String c;
 
-        Scanner s = new Scanner(System.in);
         Rectangle rect = new Rectangle();
+        Scanner s = new Scanner(System.in);
         
         System.out.println("Enter a # for length.");
         l = s.nextInt();

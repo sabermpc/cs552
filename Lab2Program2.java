@@ -11,9 +11,8 @@ public class Lab2Program2 {
 		System.out.println("Enter positive integer 2:");
 		n2 = jint.nextInt();
 
-		int d = 0;
+		int d = 0, i = 0;
 		int flag1 = -1, flag2 = -1;
-		int i = 0; //Counters
 
 		if (n1 > n2) {
 			for (d = n2; d - 1 > 0; d--) {

@@ -1,9 +1,12 @@
 public class Rectangle {
-    private int length;
-    private int width;
+    private int length, width;
     private String color;
 
-    public Rectangle () {}
+    public Rectangle () {
+        length = 0;
+        width = 0;
+        color = "white";
+    }
     public Rectangle (int l, int w, String c) {
         length = l;
         width = w;
@@ -18,7 +21,6 @@ public class Rectangle {
     public void setColor(String c) {
         color = c;
     }
-
     public int getLength() {
         return length;
     }
