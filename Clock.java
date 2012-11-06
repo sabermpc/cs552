@@ -24,8 +24,8 @@ public class Clock {
 			err = true;
 		}
 		if (err == true) {
-			System.out.println("Clock initialized to midnight.");
 			midnight();
+			System.out.println("Clock initialized to midnight.");
 		} else {
 			h = hh;
 			m = mm;
@@ -49,8 +49,8 @@ public class Clock {
 			err = true;
 		}
 		if (err == true) {
-			System.out.println("Clock initialized to midnight.");
 			midnight();
+			System.out.println("Clock initialized to midnight.");
 		} else {
 			if (pm == false) h = hh;
 			else {
@@ -78,8 +78,8 @@ public class Clock {
 			err = true;
 		}
 		if (err == true) {
-			System.out.println("Clock initialized to midnight.");
 			midnight();
+			System.out.println("Clock initialized to midnight.");
 		} else {
 			h = hh;
 			m = mm;
@@ -103,8 +103,8 @@ public class Clock {
 			err = true;
 		}
 		if (err == true) {
-			System.out.println("Clock initialized to midnight.");
 			midnight();
+			System.out.println("Clock initialized to midnight.");
 		} else {
 			if (pm == false) h = hh;
 			else {
