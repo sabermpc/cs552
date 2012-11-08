@@ -3,7 +3,7 @@ public class Clock {
     private boolean pm;
 
     public Clock() {
-		h = 0;
+    	h = 0;
 		m = 0;
 		s = 0;
 		pm = false;
@@ -24,13 +24,13 @@ public class Clock {
 			err = true;
 		}
 		if (err == true) {
-			System.out.println("Clock initialized to midnight.");
 			midnight();
+			System.out.println("Clock initialized to midnight.");
 		} else {
 			h = hh;
 			m = mm;
 			s = ss;
-			if (h > 11) pm = true;
+			pm = isPM();
 		}
 	}
 	public Clock(int hh, int mm, int ss, boolean pm) {
@@ -49,13 +49,15 @@ public class Clock {
 			err = true;
 		}
 		if (err == true) {
-			System.out.println("Clock initialized to midnight.");
 			midnight();
+			System.out.println("Clock initialized to midnight.");
 		} else {
-			if (pm == false) h = hh;
-			else {
-				h = hh + 12;
-				if (h == 24) h = 0;
+			if (pm == true) {
+				if (hh == 12) h = 12;
+				else h = hh + 12;
+			} else {
+				if (hh == 12) h = 0;
+				else h = hh;
 			}
 			m = mm;
 			s = ss;
@@ -78,13 +80,13 @@ public class Clock {
 			err = true;
 		}
 		if (err == true) {
-			System.out.println("Clock initialized to midnight.");
 			midnight();
+			System.out.println("Clock initialized to midnight.");
 		} else {
 			h = hh;
 			m = mm;
 			s = ss;
-			if (h > 11) pm = true;
+			pm = isPM();
 		}
 	}
 	void set(int hh, int mm, int ss, boolean pm) {
@@ -103,13 +105,15 @@ public class Clock {
 			err = true;
 		}
 		if (err == true) {
-			System.out.println("Clock initialized to midnight.");
 			midnight();
+			System.out.println("Clock initialized to midnight.");
 		} else {
-			if (pm == false) h = hh;
-			else {
-				h = hh + 12;
-				if (h == 24) h = 0;
+			if (pm == true) {
+				if (hh == 12) h = 12;
+				else h = hh + 12;
+			} else {
+				if (hh == 12) h = 0;
+				else h = hh;
 			}
 			m = mm;
 			s = ss;
