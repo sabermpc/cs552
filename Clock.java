@@ -9,60 +9,10 @@ public class Clock {
 		pm = false;
 	}
 	public Clock(int hh, int mm, int ss) {
-		boolean err = false;
-
-		if ((hh < 0) || (hh > 23)) {
-			System.out.println("Invalid Hours entry.");
-			err = true;
-		}
-		if ((mm < 0) || (mm > 59)) {
-			System.out.println("Invalid Minutes entry.");
-			err = true;
-		}
-		if ((ss < 0) || (ss > 59)) {
-			System.out.println("Invalid Seconds entry.");
-			err = true;
-		}
-		if (err == true) {
-			midnight();
-			System.out.println("Clock initialized to midnight.");
-		} else {
-			h = hh;
-			m = mm;
-			s = ss;
-			pm = isPM();
-		}
+		set(hh, mm, ss);
 	}
 	public Clock(int hh, int mm, int ss, boolean pm) {
-		boolean err = false;
-
-		if ((hh < 1) || (hh > 12)) {
-			System.out.println("Invalid Hours entry.");
-			err = true;
-		}
-		if ((mm < 0) || (mm > 59)) {
-			System.out.println("Invalid Minutes entry.");
-			err = true;
-		}
-		if ((ss < 0) || (ss > 59)) {
-			System.out.println("Invalid Seconds entry.");
-			err = true;
-		}
-		if (err == true) {
-			midnight();
-			System.out.println("Clock initialized to midnight.");
-		} else {
-			if (pm == true) {
-				if (hh == 12) h = 12;
-				else h = hh + 12;
-			} else {
-				if (hh == 12) h = 0;
-				else h = hh;
-			}
-			m = mm;
-			s = ss;
-			this.pm = pm;
-		}
+		set(hh, mm, ss, pm);
 	}
 	void set(int hh, int mm, int ss) {
 		boolean err = false;
