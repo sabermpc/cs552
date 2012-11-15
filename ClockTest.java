@@ -31,6 +31,6 @@ public class ClockTest {
 		if (c.isPM()) System.out.print("PM");
 		else System.out.println("AM");
 		System.out.println();
-		if (b.equals(c)) System.out.println("These clocks are equal!!");
+		if (b.equals(c)) System.out.println("\nThese clocks are equal!!\n");
 	}
 }
