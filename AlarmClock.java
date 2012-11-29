@@ -31,8 +31,7 @@ public class AlarmClock extends Clock {
 		} else {
 			h = hh;
 			m = mm;
-			if (h > 11) pm = true;
-			else pm = false;
+			pm = isPM();
 		}
 	}
 	void setAlarm(int hh, int mm, boolean pm) {
@@ -50,7 +49,13 @@ public class AlarmClock extends Clock {
 			defaultAlarm();
 			System.out.println("Alarm clock initialized to Midnight / Off.");
 		} else {
-			h = hh;
+			if (pm == true) {
+				if (hh == 12) h = 12;
+				else h = hh + 12;
+			} else {
+				if (hh == 12) h = 0;
+				else h = hh;
+			}
 			m = mm;
 			this.pm = pm;
 		}
@@ -75,14 +80,14 @@ public class AlarmClock extends Clock {
 	}
 	public String toString() {
 		String alarmIsOn, alarmIsRinging, pm;
-		
+
 		if (isAlarmOn()) alarmIsOn = "ON";
 		else alarmIsOn = "OFF";
 		if (isRinging()) alarmIsRinging = "RINGING";
 		else alarmIsRinging = "NOT RINGING";
 		if (h > 11) pm = "PM";
 		else pm = "AM";
-		
+
 		return "Clock " + super.toString() + "  Alarm [" + String.format("%02d:%02d / %02d:%02d ", getAlarmHours24(), getAlarmMinutes(), getAlarmHours12(), getAlarmMinutes()) + pm + " / " + alarmIsOn + " / " + alarmIsRinging + "]";
 	}
 
