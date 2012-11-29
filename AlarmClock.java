@@ -31,7 +31,8 @@ public class AlarmClock extends Clock {
 		} else {
 			h = hh;
 			m = mm;
-			pm = this.isPM();
+			if (h > 11) pm = true;
+			else pm = false;
 		}
 	}
 	void setAlarm(int hh, int mm, boolean pm) {
