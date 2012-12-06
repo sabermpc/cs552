@@ -1,0 +1,1 @@
+{"ts":1354763885568,"silentsave":true,"restoring":false,"patch":[[{"diffs":[[1,"public class CourseTest {\n    public static void main(String[] args) {\n\t\tSystem.out.print(\"Hello World!\");\n\t}\n}"]],"start1":0,"start2":0,"length1":0,"length2":111}]],"length":111}
