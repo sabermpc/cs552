@@ -1,9 +1,9 @@
 public class Clock {
-    private int h, h12, m, s;
-    private boolean pm;
+	private int h, h12, m, s;
+	private boolean pm;
 
-    public Clock() {
-    	h = 0;
+	public Clock() {
+		h = 0;
 		m = 0;
 		s = 0;
 		pm = false;
