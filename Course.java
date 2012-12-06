@@ -4,9 +4,14 @@ public class Course {
 //	private student array or object//which to use?
 
 	public boolean accept(Student student) {
-		return true;
+		if ((numStudents <= 10) && !(isEnrolled(student))) {
+			numStudents++;
+			return true;
+		}
+		return false;
 	}
 	public boolean isEnrolled(Student student) {
+
 		return true;
 	}
 	public int getNumStudents() {
