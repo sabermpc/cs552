@@ -1,6 +1,6 @@
 public class Question {
-    private String questionText;
-    private String correctAnswer;
+	private String questionText;
+	private String correctAnswer;
 	private String answer;
 //	private Boolean isCorrect; //Unused member variable
 	
