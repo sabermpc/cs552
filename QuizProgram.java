@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class QuizProgram {
-    public static void main(String[] args) {
-    	Quiz q = new Quiz(10);
+	public static void main(String[] args) {
+		Quiz q = new Quiz(10);
 
 		q.addQuestion(new Question("What is bitwise NOT 0111?", "1000"));
 		q.addQuestion(new Question("In what city does Pierce reside?", "Woodland Hills"));
