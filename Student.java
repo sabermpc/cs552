@@ -11,4 +11,9 @@ public class Student {
 /*	public Course getCourse(int i) {
 		return ;
 	}*/
+    
+    
+    public static void main(String[] args) {
+        System.out.print("Hello World!");
+	}
 }

@@ -23,4 +23,9 @@ public class Course {
 	public boolean courseIsFull() {
 		return true;
 	}
+    
+    
+    public static void main(String[] args) {
+    	System.out.print("Hello World!");
+	}
 }
